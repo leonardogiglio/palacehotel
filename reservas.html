@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./estilos.css">
+        <link rel="stylesheet" href="./main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/fbb41357e6.js" crossorigin="anonymous"></script>
+        
+    <title>Reservas</title>
+</head>
+<body>
+    <div class="container-reservas">
+        <!-- head -->
+        <section class="reservas">
+            <div class="form-item">
+                <button class="btn" value="Volver"><a href="./index.html">Volver</a></button>
+            </div> 
+            <h2>Ingrese una nueva reserva.</h2>
+            <!-- head -->
+ 
+    <div class="book-agenda">
+        <div class="book-form">
+            <div class="form-item">
+                    <label for="nombre">Nombre: </label>
+                    <input type="text" id="nombre" class="nombre">
+            </div>
+            
+            <div class="form-item">
+                <label for="checkin-date">Entrada: </label>
+                <input type="date" id="checkin-date" class="entrada">
+            </div>
+           
+            <div class="form-item">
+                <label for="checkout-date">Salida: </label>
+                <input type="date" id="checkout-date" class="salida">
+            </div>
+         
+            <div class="form-item">
+                <label for="adult">DNI: </label>
+                <input type="text" id="dni" class="dni">
+            </div>
+         
+            <div class="form-item">
+                <label for="cantidadPersonas">Cantidad de Personas: </label>
+                <input type="number" min="1" value="1" id="personas" class="cantidad-personas">
+            </div>
+          
+            <div class="form-item">
+                <label for="rooms">Habitación: </label>
+                <select id="habitacion" class="habitacion">
+                    <option value="Standard">Standard</option>
+                    <option value="Premium">Premium</option>
+                    <option value="Superior">Superior</option>
+                    <option value="Luxury">Luxury</option>
+                </select>
+            </div>
+         
+            <div class="form-item">
+                <input type="submit" class="btn btn-agregar" value="Agregar Reserva">
+            </div>  
+            
+        </div>
+    </div>
+                <!-- listado reservas -->
+                <div class="listado-reservas">
+                    <h2>Agenda de reservas.</h2>
+                    <form class="book-form">
+                    <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+                    <input type="text" name="buscador" id="buscador" placeholder="Buscar reserva por nombre o dni." onclick="buscarReserva()" >
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <script src="./js/reserva.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>
